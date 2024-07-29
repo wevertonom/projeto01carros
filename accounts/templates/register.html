@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+    <form method="post" >
+        {% csrf_token %}
+        <table>
+            Usuario: {{ user_form.username }} <br> {{ user_form.username.errors }}
+            Senha: {{ user_form.password1 }} <br> {{ user_form.password1.errors }}
+            Confirme Senha : {{ user_form.password2 }} <br> {{ user_form.password2.errors }}
+            <br>
+            <input type="submit" value="Cadastrar" >
+        </table>
+
+    </form>
+<br>
+{% endblock %}

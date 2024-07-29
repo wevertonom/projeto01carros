@@ -1,0 +1,25 @@
+<html>
+    <header>
+        <title> Meus carros</title>
+    </header>
+    {% block content %}
+    <body>
+        <p> {{ cars }} </p>
+
+        {% for car in cars %}
+            <p> {{ car.Model }} </p>
+        {% endfor %}
+        <br>
+        {% for car in carsF %}
+            <p> {{ car.Model }} </p>
+        {% endfor %}
+        <br>
+        {% for car in carsF2 %}
+            <p> {{ car.Model }} </p>
+        {% endfor %}
+        <br>
+        <p>{{ search }}</p>
+        <h3> top </h3>
+    </body>
+    {% endblock %}
+</html>
